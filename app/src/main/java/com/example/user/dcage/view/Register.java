@@ -5,7 +5,8 @@ import android.os.Bundle;
 
 import com.example.user.dcage.R;
 
-public class Register extends AppCompatActivity {
+public class Register extends AppCompatActivity implements RegisterView
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

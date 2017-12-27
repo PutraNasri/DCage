@@ -11,12 +11,22 @@ public class Area implements Serializable{
     private String alamat ;
     private String id ;
     private String email ;
+    private String password ;
 
-    public Area(String nama, String alamat, String id, String email) {
+    public Area(String nama, String alamat, String id, String email, String password) {
         this.nama = nama;
         this.alamat = alamat;
         this.id = id;
         this.email = email;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNama() {

@@ -1,5 +1,6 @@
 package com.example.user.dcage.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -30,5 +31,11 @@ public class Login extends AppCompatActivity implements LoginView {
     @OnClick(R.id.btn_login)
     public void login(){
         presenter.ceklogin(edtEmail.getText().toString(), edtPassword.getText().toString());
+    }
+
+    @OnClick(R.id.btn_register)
+    public void register(){
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
 }

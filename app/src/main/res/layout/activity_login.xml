@@ -24,36 +24,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Selamat Datang "
+                        android:text="MASUK"
                         android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="di DCage"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Sistem pemantauan peternakan secara Online " />
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="di rancang untuk peternakan berbasis Internet Of Things" />
 
                 </LinearLayout>
 
@@ -76,7 +57,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="User Name"
+                        android:hint="Email"
                         android:inputType="textPersonName" />
 
                     <EditText
@@ -91,13 +72,43 @@
                         android:id="@+id/btn_login"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="#FF16EA19"
                         android:text="LOGIN" />
 
-                    <Button
-                        android:id="@+id/button2"
+                    <TextView
+                        android:id="@+id/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="REGISTER" />
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="Belum Daftar?"
+                        android:textColor="#000000" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KLIK"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/btn_register"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toEndOf="@+id/textView5"
+                            android:text="disini "
+                            android:textColor="#FF39C937" />
+                    </RelativeLayout>
+
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
