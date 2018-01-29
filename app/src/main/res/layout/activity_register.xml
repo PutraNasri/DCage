@@ -30,7 +30,7 @@
                 android:textSize="30sp" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/edt_namadaftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="15"
@@ -39,7 +39,7 @@
                 android:paddingTop="15dp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/edt_alamatdaftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="15"
@@ -48,7 +48,7 @@
                 android:paddingTop="15dp" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/edt_emaildaftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="15"
@@ -57,7 +57,7 @@
                 android:paddingTop="15dp" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/edt_passworddaftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="15"
@@ -66,7 +66,7 @@
                 android:paddingTop="15dp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_daftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -77,5 +77,14 @@
         </LinearLayout>
 
     </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>

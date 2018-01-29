@@ -1,12 +1,10 @@
 package com.example.user.dcage.view;
 
-
-
 /**
- * Created by user on 10/1/2017.
+ * Created by user on 1/24/2018.
  */
 
-public interface LoginView {
+public interface UnitbaruView {
 
     void tampilkanHasil(String hasil);
 }

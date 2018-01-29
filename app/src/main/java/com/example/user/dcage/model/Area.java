@@ -12,21 +12,18 @@ public class Area implements Serializable{
     private String id ;
     private String email ;
     private String password ;
+    private String level ;
 
-    public Area(String nama, String alamat, String id, String email, String password) {
+    public Area() {
+    }
+
+    public Area(String nama, String alamat, String id, String email, String password, String level) {
         this.nama = nama;
         this.alamat = alamat;
         this.id = id;
         this.email = email;
         this.password = password;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        this.level = level;
     }
 
     public String getNama() {
@@ -61,6 +58,19 @@ public class Area implements Serializable{
         this.email = email;
     }
 
-    public Area() {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 }

@@ -7,4 +7,6 @@ package com.example.user.dcage.presenter;
 public interface LoginPresenter {
 
     void ceklogin(String email, String password);
+
+    void kirimHasil(String hasil);
 }

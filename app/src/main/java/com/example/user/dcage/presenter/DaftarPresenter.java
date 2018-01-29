@@ -5,4 +5,8 @@ package com.example.user.dcage.presenter;
  */
 
 public interface DaftarPresenter {
+
+    void mendaftar (String nama, String alamat, String email, String password);
+
+    void kirimhasil (String hasil);
 }

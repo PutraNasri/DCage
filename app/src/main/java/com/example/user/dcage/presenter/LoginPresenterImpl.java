@@ -22,5 +22,13 @@ public class LoginPresenterImpl implements LoginPresenter {
     @Override
     public void ceklogin(String email, String password) {
         new LoginTask(this, activity).execute(email, password);
+
     }
+
+    @Override
+    public void kirimHasil(String hasil) {
+        view.tampilkanHasil(hasil);
+    }
+
+
 }

@@ -5,4 +5,5 @@ package com.example.user.dcage.view;
  */
 
 public interface RegisterView {
+    void tampilkanHasil(String hasil);
 }

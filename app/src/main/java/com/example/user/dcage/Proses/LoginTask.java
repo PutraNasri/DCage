@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import com.example.user.dcage.presenter.LoginPresenter;
 import com.example.user.dcage.presenter.LoginPresenterImpl;
 
 import org.json.JSONException;
@@ -31,9 +32,11 @@ public class LoginTask extends AsyncTask<String, Void, String> {
     private String password;
     private StringBuilder response = new StringBuilder();
     private Activity activity;
+    private LoginPresenter loginPresenter;
 
     public LoginTask(LoginPresenterImpl loginPresenter, Activity activity) {
         this.activity = activity;
+        this.loginPresenter = loginPresenter;
     }
 
     @Override
@@ -45,6 +48,8 @@ public class LoginTask extends AsyncTask<String, Void, String> {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+
+
 
         try {
             URL url = new URL("https://dcage-163007.appspot.com/_ah/api/area/v1/login/"+email+"/"+password);
@@ -82,13 +87,14 @@ public class LoginTask extends AsyncTask<String, Void, String> {
             String id = object.getString("id").toString();
 
             if(id != null){
-                Toast.makeText(activity, "berhasil : "+id, Toast.LENGTH_SHORT).show();
+
+                loginPresenter.kirimHasil(id);
             }
             else{
-                Toast.makeText(activity, "Gagal", Toast.LENGTH_SHORT).show();
+                loginPresenter.kirimHasil("Gagagl");
             }
         } catch (JSONException e) {
-            Toast.makeText(activity, "Gagal", Toast.LENGTH_SHORT).show();
+            loginPresenter.kirimHasil("Error");
         }
     }
 }

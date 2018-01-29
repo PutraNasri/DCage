@@ -5,12 +5,10 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
-import com.example.user.dcage.model.Area;
-import com.example.user.dcage.presenter.DaftarPresenter;
-import com.example.user.dcage.presenter.DaftarPresenterImpl;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.user.dcage.model.Unit;
+import com.example.user.dcage.presenter.UnitbaruPresenter;
+import com.example.user.dcage.presenter.UnitbaruPresenterImpl;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -22,30 +20,31 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
+
 import javax.net.ssl.HttpsURLConnection;
 
 /**
- * Created by user on 12/27/2017.
+ * Created by user on 1/24/2018.
  */
 
-public class DaftarTask extends AsyncTask<String, Void, Integer> {
-    private DaftarPresenterImpl daftarPresenter;
-    private String email;
-    private String password;
-    private String nama;
-    private String alamat;
+public class UnitbaruTask extends AsyncTask<String, Void, Integer>{
+
+    private UnitbaruPresenterImpl unitbaruPresenter;
+    private String id;
+    private String namakandang;
+    private String keterangankandang;
 
     private byte[] outputBytes;
     private StringBuilder response = new StringBuilder();
-    private Area area;
-    private DaftarTask daftarTask;
-    private DaftarPresenterImpl presenter;
+    private Unit unit;
+    private UnitbaruTask unitbaruTask;
+    private UnitbaruPresenterImpl presenter;
     private Activity activity;
 
 
-    public DaftarTask(DaftarPresenterImpl daftarPresenter, Activity activity) {
+    public UnitbaruTask(UnitbaruPresenterImpl unitbaruPresenter, Activity activity) {
         this.activity = activity;
-        this.daftarPresenter = daftarPresenter;
+        this.unitbaruPresenter = unitbaruPresenter;
     }
 
     @Override
@@ -53,30 +52,30 @@ public class DaftarTask extends AsyncTask<String, Void, Integer> {
         super.onPreExecute();
     }
 
+    //POST     https://dcage-163007.appspot.com/_ah/api/unit/v1/baru
     @Override
     protected Integer doInBackground(String... params) {
 
         try {
-            nama = URLDecoder.decode(params[0], "UTF-8");
-            alamat = URLDecoder.decode(params[1], "UTF-8");
-            email = URLDecoder.decode(params[2], "UTF-8");
-            password = URLDecoder.decode(params[3], "UTF-8");
+            id = URLDecoder.decode(params[0], "UTF-8");
+            namakandang = URLDecoder.decode(params[1], "UTF-8");
+            keterangankandang = URLDecoder.decode(params[2], "UTF-8");
+
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
 
-        Log.d("tes", nama + " " + alamat + " " + email + " " + password);
+        Log.d("tes", id + " " + namakandang + " " + keterangankandang );
 
         Uri.Builder uri = new Uri.Builder()
-                .appendQueryParameter("nama", nama)
-                .appendQueryParameter("alamat", alamat)
-                .appendQueryParameter("email", email)
-                .appendQueryParameter("password", password);
+                .appendQueryParameter("id", id)
+                .appendQueryParameter("keterangan", keterangankandang)
+                .appendQueryParameter("nama", namakandang);
         String query = uri.build().getEncodedQuery();
         URL url;
         try {
 
-            url = new URL("https://dcage-163007.appspot.com/_ah/api/area/v1/baru");
+            url = new URL("https://dcage-163007.appspot.com/_ah/api/unit/v1/baru");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             /* pass post data */
             outputBytes = query.getBytes("UTF-8");
@@ -137,12 +136,12 @@ public class DaftarTask extends AsyncTask<String, Void, Integer> {
     protected void onPostExecute(Integer status) {
 
         if (status == HttpsURLConnection.HTTP_OK) {
-            daftarPresenter.kirimhasil("ok");
-        }
-       else{
-                daftarPresenter.kirimhasil("error");
-            }
+            unitbaruPresenter.kirimhasil("ok");
 
         }
+        else{
+            unitbaruPresenter.kirimhasil("error");
 
+        }
+    }
 }
