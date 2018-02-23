@@ -118,6 +118,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/testing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test daftar list unit" />
+
+            <Button
+                android:id="@+id/testing2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test tambah sensor kandang" />
         </LinearLayout>
     </FrameLayout>
 </RelativeLayout>

@@ -2,7 +2,7 @@ package com.example.user.dcage.presenter;
 
 import android.app.Activity;
 
-import com.example.user.dcage.Proses.LoginTask;
+import com.example.user.dcage.model.Proses.LoginTask;
 import com.example.user.dcage.view.LoginView;
 
 /**

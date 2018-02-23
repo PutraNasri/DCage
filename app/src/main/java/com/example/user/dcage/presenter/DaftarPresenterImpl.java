@@ -1,10 +1,8 @@
 package com.example.user.dcage.presenter;
 
 import android.app.Activity;
-import android.widget.Toast;
 
-import com.example.user.dcage.Proses.DaftarTask;
-import com.example.user.dcage.Proses.LoginTask;
+import com.example.user.dcage.model.Proses.DaftarTask;
 import com.example.user.dcage.view.RegisterView;
 
 /**

@@ -1,6 +1,5 @@
 package com.example.user.dcage.view;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,12 +52,10 @@ public class Login extends AppCompatActivity implements LoginView {
         }
         else {
             Toast.makeText(this, ""+hasil, Toast.LENGTH_SHORT).show();
-            id_tes.setText(""+hasil);  //testing id
+           // id_tes.setText(""+hasil);  //testing id
 
             Intent intent = new Intent(this, Unitbaru.class);
             startActivity(intent);
-
-
         }
 
     }
@@ -68,4 +65,23 @@ public class Login extends AppCompatActivity implements LoginView {
         Intent intent = new Intent(this, Register.class);
         startActivity(intent);
     }
+
+
+    ////////////////////////bagian testing///////////////////////////////////////
+
+    @OnClick(R.id.testing)
+    public void tes() {
+        Intent intent = new Intent(this, Listunit.class);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.testing2)
+    public void tes2() {
+        Intent intent = new Intent(this, TambahSensor.class);
+        startActivity(intent);
+    }
+
+
+
+
 }

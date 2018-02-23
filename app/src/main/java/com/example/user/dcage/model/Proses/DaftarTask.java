@@ -1,16 +1,12 @@
-package com.example.user.dcage.Proses;
+package com.example.user.dcage.model.Proses;
 
 import android.app.Activity;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
-import com.example.user.dcage.model.Area;
-import com.example.user.dcage.presenter.DaftarPresenter;
-import com.example.user.dcage.presenter.DaftarPresenterImpl;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.user.dcage.model.Area;
+import com.example.user.dcage.presenter.DaftarPresenterImpl;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

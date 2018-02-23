@@ -1,8 +1,7 @@
-package com.example.user.dcage.Proses;
+package com.example.user.dcage.model.Proses;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import com.example.user.dcage.presenter.LoginPresenter;
 import com.example.user.dcage.presenter.LoginPresenterImpl;
@@ -48,8 +47,6 @@ public class LoginTask extends AsyncTask<String, Void, String> {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
-
 
         try {
             URL url = new URL("https://dcage-163007.appspot.com/_ah/api/area/v1/login/"+email+"/"+password);

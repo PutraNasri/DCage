@@ -1,13 +1,11 @@
-package com.example.user.dcage.Proses;
+package com.example.user.dcage.model.Proses;
 
 import android.app.Activity;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.user.dcage.model.Unit;
-import com.example.user.dcage.presenter.UnitbaruPresenter;
 import com.example.user.dcage.presenter.UnitbaruPresenterImpl;
 
 import java.io.BufferedInputStream;
@@ -52,7 +50,7 @@ public class UnitbaruTask extends AsyncTask<String, Void, Integer>{
         super.onPreExecute();
     }
 
-    //POST     https://dcage-163007.appspot.com/_ah/api/unit/v1/baru
+
     @Override
     protected Integer doInBackground(String... params) {
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.dcage.view.TambahSensor">
+
+    <EditText
+        android:id="@+id/edt_namasensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp"
+        android:ems="10"
+        android:hint=" Nama Sensor"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edt_keterangansensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edt_namasensor"
+        android:layout_below="@+id/edt_namasensor"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:hint="Keterangan"
+        android:inputType="textPersonName" />
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_tambahsensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar4"
+        android:layout_alignEnd="@+id/edt_keterangansensor"
+        android:layout_alignStart="@+id/edt_keterangansensor"
+        android:layout_marginBottom="42dp"
+        android:text="TAMBAH" />
+</RelativeLayout>

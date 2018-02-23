@@ -7,13 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.user.dcage.Proses.DaftarTask;
 import android.widget.ProgressBar;
 import com.example.user.dcage.R;
 import com.example.user.dcage.presenter.DaftarPresenter;
 import com.example.user.dcage.presenter.DaftarPresenterImpl;
-import com.example.user.dcage.presenter.LoginPresenter;
-import com.example.user.dcage.presenter.LoginPresenterImpl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
