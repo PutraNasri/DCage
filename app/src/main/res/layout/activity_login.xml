@@ -130,6 +130,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="test tambah sensor kandang" />
+
+            <Button
+                android:id="@+id/testing3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TEST DAFTAR LIST SENSOR" />
         </LinearLayout>
     </FrameLayout>
 </RelativeLayout>
