@@ -8,7 +8,7 @@ public class catatan {
 //////////////////////////////////////// daftar id ////////////////////////////////////////////
     // 5732568548769792   id pemilik    hanya 1
     // 5738600293466112   id unit kandang     bisa banyak
-    //
+
 
 
     /////////////////////////////////// yang sudah selesai////////////////////////////////////
@@ -22,8 +22,8 @@ public class catatan {
     // api tambah sensor bagian sensor
     // api list sensor bagian sensor
 
-
-
+    // api tambah aktuator bagian aktuator
+    // api list aktuator bagian aktuator
 
     /////////////////////////////////// yang belum selesai////////////////////////////////////
 
@@ -31,11 +31,7 @@ public class catatan {
 
     // api hapus sensor bagian sensor
 
-    // api tambah aktuator bagian aktuator
-
     // api hapus aktuator bagian aktuator
-
-    // api list aktuator bagian aktuator
 
     // api daftar list bacaan sensor bagian bacaan
 
@@ -44,4 +40,19 @@ public class catatan {
     // api daftar list bacaan aktuator bagian bacaanaktuator
 
     // api tambah bacaan aktuator bagian bacaanaktuator
+
+
+
+    /////////////////////////////////// yang dalam proses////////////////////////////////////
+
+
+
+
+
+
+
+    /////////////////////////////////// catatan penting ////////////////////////////////////
+
+    // bagian registerview belom di ambahkan if apabila gagal mendaftar tetap di halaman daftar
+    // respon jika arrray list tidak ada data berikan info tidak ada data
 }

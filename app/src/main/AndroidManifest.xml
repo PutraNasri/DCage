@@ -25,7 +25,9 @@
         <activity android:name=".view.Unitbaru" />
         <activity android:name=".view.Listunit" />
         <activity android:name=".view.TambahSensor" />
-        <activity android:name=".view.Listsensor"></activity>
+        <activity android:name=".view.Listsensor" />
+        <activity android:name=".view.TambahAktuator" />
+        <activity android:name=".view.Listaktuator"></activity>
     </application>
 
 </manifest>

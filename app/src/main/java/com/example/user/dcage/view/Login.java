@@ -85,6 +85,16 @@ public class Login extends AppCompatActivity implements LoginView {
         Intent intent = new Intent(this, Listsensor.class);
         startActivity(intent);
     }
+    @OnClick(R.id.testing4)
+    public void tes4() {
+        Intent intent = new Intent(this, TambahAktuator.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.testing5)
+    public void tes5() {
+        Intent intent = new Intent(this, Listaktuator.class);
+        startActivity(intent);
+    }
 
 
 

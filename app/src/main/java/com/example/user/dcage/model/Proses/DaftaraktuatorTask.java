@@ -5,7 +5,8 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.user.dcage.model.Unit;
-import com.example.user.dcage.presenter.DaftarunitPresenterImpl;
+import com.example.user.dcage.presenter.DaftarAktuatorPresenterImpl;
+import com.example.user.dcage.presenter.DaftarSensorPresenterImpl;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,22 +25,21 @@ import java.net.URLDecoder;
 import java.util.ArrayList;
 
 /**
- * Created by user on 1/29/2018.
+ * Created by user on 3/15/2018.
  */
 
-public class DaftarunitTask extends AsyncTask<String, Void, String> {
-    private DaftarunitPresenterImpl daftarunitPresenter;
+public class DaftaraktuatorTask extends AsyncTask<String, Void, String> {
+    private DaftarAktuatorPresenterImpl daftarAktuatorPresenter;
     private String id;
 
     private byte[] outputBytes;
     private StringBuilder response = new StringBuilder();
     private Activity activity;
 
-    public DaftarunitTask(DaftarunitPresenterImpl daftarunitPresenter, Activity activity) {
-        this.daftarunitPresenter = daftarunitPresenter;
+    public DaftaraktuatorTask(DaftarAktuatorPresenterImpl daftarAktuatorPresenter, Activity activity) {
+        this.daftarAktuatorPresenter = daftarAktuatorPresenter;
         this.activity = activity;
     }
-
     @Override
     protected String doInBackground(String... params) {
 
@@ -49,8 +49,9 @@ public class DaftarunitTask extends AsyncTask<String, Void, String> {
             e.printStackTrace();
         }
 
+
         try {
-            URL url = new URL("https://dcage-163007.appspot.com/_ah/api/unit/v1/daftar/"+id);
+            URL url = new URL("https://dcage-163007.appspot.com/_ah/api/aktuator/v1/daftar/"+id);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(15000);
             conn.setConnectTimeout(15000);
@@ -94,13 +95,13 @@ public class DaftarunitTask extends AsyncTask<String, Void, String> {
             }
 
             if (id != null) {
-                daftarunitPresenter.kirimHasil(daftarUnit);
+                daftarAktuatorPresenter.kirimHasil(daftarUnit);
             } else {
                 Toast.makeText(activity, "tidak ada", Toast.LENGTH_SHORT).show();
-                daftarunitPresenter.kirimHasil(null);
+                daftarAktuatorPresenter.kirimHasil(null);
             }
         } catch (JSONException e) {
-            daftarunitPresenter.kirimHasil(null);
+            daftarAktuatorPresenter.kirimHasil(null);
 //            Toast.makeText(activity, "Terjadi kesalahan", Toast.LENGTH_SHORT).show();
         }
     }

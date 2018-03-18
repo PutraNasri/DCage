@@ -49,7 +49,7 @@ public class DaftarsensorTask extends AsyncTask<String, Void, String>{
             e.printStackTrace();
         }
 
-//   GET https://dcage-163007.appspot.com/_ah/api/sensor/v1/sensor/area/5738600293466112
+
         try {
             URL url = new URL("https://dcage-163007.appspot.com/_ah/api/sensor/v1/sensor/area/"+id);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
