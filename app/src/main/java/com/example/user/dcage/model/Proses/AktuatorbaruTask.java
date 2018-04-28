@@ -6,8 +6,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.example.user.dcage.presenter.TambahAktuatorPresenterImpl;
-import com.example.user.dcage.presenter.TambahSensorPresenterImpl;
-import com.example.user.dcage.view.TambahAktuator;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

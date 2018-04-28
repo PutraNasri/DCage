@@ -6,19 +6,30 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.dcage.view.Listunit">
 
-    <Button
-        android:id="@+id/testlist_btn"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="test list"
-        android:visibility="gone"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="231dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabTambahUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="15dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_daftar_unit"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
 </RelativeLayout>

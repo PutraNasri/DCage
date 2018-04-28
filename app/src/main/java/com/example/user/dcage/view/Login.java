@@ -25,8 +25,6 @@ public class Login extends AppCompatActivity implements LoginView {
     @BindView(R.id.progressBar)ProgressBar loading;
     @BindView(R.id.textView)TextView id_tes;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,13 +49,11 @@ public class Login extends AppCompatActivity implements LoginView {
             Toast.makeText(this, "belum terdaftar", Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(this, ""+hasil, Toast.LENGTH_SHORT).show();
-           // id_tes.setText(""+hasil);  //testing id
 
-            Intent intent = new Intent(this, Unitbaru.class);
+            Intent intent = new Intent(this, Listunit.class);
+            intent.putExtra("id_unit",hasil);
             startActivity(intent);
         }
-
     }
 
     @OnClick(R.id.btn_register)
@@ -65,38 +61,5 @@ public class Login extends AppCompatActivity implements LoginView {
         Intent intent = new Intent(this, Register.class);
         startActivity(intent);
     }
-
-
-    ////////////////////////bagian testing///////////////////////////////////////
-
-    @OnClick(R.id.testing)
-    public void tes() {
-        Intent intent = new Intent(this, Listunit.class);
-        startActivity(intent);
-    }
-
-    @OnClick(R.id.testing2)
-    public void tes2() {
-        Intent intent = new Intent(this, TambahSensor.class);
-        startActivity(intent);
-    }
-    @OnClick(R.id.testing3)
-    public void tes3() {
-        Intent intent = new Intent(this, Listsensor.class);
-        startActivity(intent);
-    }
-    @OnClick(R.id.testing4)
-    public void tes4() {
-        Intent intent = new Intent(this, TambahAktuator.class);
-        startActivity(intent);
-    }
-    @OnClick(R.id.testing5)
-    public void tes5() {
-        Intent intent = new Intent(this, Listaktuator.class);
-        startActivity(intent);
-    }
-
-
-
 
 }

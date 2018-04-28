@@ -96,13 +96,14 @@ public class DaftarsensorTask extends AsyncTask<String, Void, String>{
 
             if (id != null) {
                 daftarsensorPresenter.kirimHasil(daftarUnit);
+                Toast.makeText(activity, "respon "+response, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(activity, "tidak ada", Toast.LENGTH_SHORT).show();
-                daftarsensorPresenter.kirimHasil(null);
+             //   daftarsensorPresenter.kirimHasil(null);
             }
         } catch (JSONException e) {
-            daftarsensorPresenter.kirimHasil(null);
-//            Toast.makeText(activity, "Terjadi kesalahan", Toast.LENGTH_SHORT).show();
+   //         daftarsensorPresenter.kirimHasil(null);
+           Toast.makeText(activity, "SENSOR KOSONG", Toast.LENGTH_SHORT).show();
         }
     }
 }

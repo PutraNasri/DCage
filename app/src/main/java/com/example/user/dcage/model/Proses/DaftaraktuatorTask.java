@@ -97,12 +97,12 @@ public class DaftaraktuatorTask extends AsyncTask<String, Void, String> {
             if (id != null) {
                 daftarAktuatorPresenter.kirimHasil(daftarUnit);
             } else {
-                Toast.makeText(activity, "tidak ada", Toast.LENGTH_SHORT).show();
-                daftarAktuatorPresenter.kirimHasil(null);
+ //               Toast.makeText(activity, "tidak ada", Toast.LENGTH_SHORT).show();
+//                daftarAktuatorPresenter.kirimHasil(null);
             }
         } catch (JSONException e) {
-            daftarAktuatorPresenter.kirimHasil(null);
-//            Toast.makeText(activity, "Terjadi kesalahan", Toast.LENGTH_SHORT).show();
+//            daftarAktuatorPresenter.kirimHasil(null);
+            Toast.makeText(activity, "AKTUATOR KOSONG", Toast.LENGTH_SHORT).show();
         }
     }
 }

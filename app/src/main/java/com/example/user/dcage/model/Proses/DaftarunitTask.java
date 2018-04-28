@@ -89,19 +89,19 @@ public class DaftarunitTask extends AsyncTask<String, Void, String> {
                 Unit unit = new Unit(jsonUnit.getString("id").toString(),
                         jsonUnit.get("keterangan").toString(),
                         jsonUnit.get("nama").toString());
-
                 daftarUnit.add(unit);
             }
 
             if (id != null) {
                 daftarunitPresenter.kirimHasil(daftarUnit);
+                Toast.makeText(activity, "respon " +response, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(activity, "tidak ada", Toast.LENGTH_SHORT).show();
                 daftarunitPresenter.kirimHasil(null);
             }
         } catch (JSONException e) {
-            daftarunitPresenter.kirimHasil(null);
-//            Toast.makeText(activity, "Terjadi kesalahan", Toast.LENGTH_SHORT).show();
+  //          daftarunitPresenter.kirimHasil(null);
+            Toast.makeText(activity, "UNIT KOSONG", Toast.LENGTH_SHORT).show();
         }
     }
 }

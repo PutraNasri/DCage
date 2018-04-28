@@ -11,4 +11,6 @@ import java.util.ArrayList;
 public interface ListaktuatorView {
 
     void tampilkanHasil(ArrayList<Unit> hasil);
+
+    void tampilkanHasil(String hasil);
 }

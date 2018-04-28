@@ -58,7 +58,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:hint="Email"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName"
+                        android:text="nasrisyawaldi@gmail.com" />
 
                     <EditText
                         android:id="@+id/edt_password"
@@ -66,7 +67,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:hint="Password"
-                        android:inputType="textPassword" />
+                        android:inputType="textPassword"
+                        android:text="byonge81" />
 
                     <Button
                         android:id="@+id/btn_login"
@@ -119,47 +121,6 @@
                 android:layout_height="wrap_content"
                 android:visibility="invisible" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" >
-
-                    <Button
-                        android:id="@+id/testing"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="test daftar list unit" />
-
-                    <Button
-                        android:id="@+id/testing2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="test tambah sensor kandang" />
-
-                    <Button
-                        android:id="@+id/testing3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TEST DAFTAR LIST SENSOR" />
-
-                    <Button
-                        android:id="@+id/testing4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TAMBAH AKTUATOR" />
-
-                    <Button
-                        android:id="@+id/testing5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TEST DAFTAR LIST AKTUATOR" />
-
-                </LinearLayout>
-            </ScrollView>
         </LinearLayout>
     </FrameLayout>
 </RelativeLayout>

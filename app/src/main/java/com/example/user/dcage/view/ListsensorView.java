@@ -13,4 +13,6 @@ import java.util.ArrayList;
 public interface ListsensorView {
 
     void tampilkanHasil(ArrayList<Unit> hasil);
+
+    void tampilkanHasil(String hasil);
 }

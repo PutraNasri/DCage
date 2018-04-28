@@ -4,6 +4,8 @@ import android.app.Activity;
 
 import com.example.user.dcage.model.Proses.SensorbaruTask;
 import com.example.user.dcage.model.Proses.UnitbaruTask;
+import com.example.user.dcage.view.Listsensor;
+import com.example.user.dcage.view.ListsensorView;
 import com.example.user.dcage.view.TambahSensorView;
 
 /**
@@ -11,11 +13,12 @@ import com.example.user.dcage.view.TambahSensorView;
  */
 
 public class TambahSensorPresenterImpl implements TambahSensorPresenter {
-    private TambahSensorView tambahSensorView;
+
+    private Listsensor listsensor;
     private Activity activity;
 
-    public TambahSensorPresenterImpl(TambahSensorView tambahSensorView, Activity activity) {
-        this.tambahSensorView = tambahSensorView;
+    public TambahSensorPresenterImpl(Listsensor listsensor, Activity activity) {
+        this.listsensor = listsensor;
         this.activity = activity;
     }
 
@@ -27,6 +30,6 @@ public class TambahSensorPresenterImpl implements TambahSensorPresenter {
 
     @Override
     public void kirimhasil(String hasil) {
-        tambahSensorView.tampilkanHasil(hasil);
+        listsensor.tampilkanHasil(hasil);
     }
 }

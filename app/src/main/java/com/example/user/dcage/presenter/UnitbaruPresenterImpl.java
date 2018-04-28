@@ -3,6 +3,7 @@ package com.example.user.dcage.presenter;
 import android.app.Activity;
 
 import com.example.user.dcage.model.Proses.UnitbaruTask;
+import com.example.user.dcage.view.Listunit;
 import com.example.user.dcage.view.UnitbaruView;
 
 /**
@@ -10,10 +11,10 @@ import com.example.user.dcage.view.UnitbaruView;
  */
 
 public class UnitbaruPresenterImpl implements  UnitbaruPresenter{
-    private UnitbaruView view ;
     private Activity activity ;
+    private Listunit view ;
 
-    public UnitbaruPresenterImpl(UnitbaruView view,Activity activity) {
+    public UnitbaruPresenterImpl(Listunit view,Activity activity) {
         this.view=view;
         this.activity=activity;
     }

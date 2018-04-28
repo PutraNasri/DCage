@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <EditText
+            android:id="@+id/edt_namaaktuator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Nama Sensor"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edt_keterangansensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/edt_namaaktuator"
+            android:layout_below="@+id/edt_namaaktuator"
+            android:ems="10"
+            android:hint="Keterangan"
+            android:inputType="textMultiLine" />
+
+
+        <Button
+            android:id="@+id/btn_tambah_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Sensor" />
+    </LinearLayout>
+</RelativeLayout>
