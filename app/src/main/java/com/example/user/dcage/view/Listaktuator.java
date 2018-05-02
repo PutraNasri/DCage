@@ -21,6 +21,7 @@ import com.example.user.dcage.presenter.DaftarAktuatorPresenter;
 import com.example.user.dcage.presenter.DaftarAktuatorPresenterImpl;
 import com.example.user.dcage.presenter.TambahAktuatorPresenter;
 import com.example.user.dcage.presenter.TambahAktuatorPresenterImpl;
+import com.example.user.dcage.view.adapter.DaftarAktuatorAdapter;
 import com.example.user.dcage.view.adapter.DaftarSensorAdapter;
 
 import java.util.ArrayList;
@@ -57,7 +58,7 @@ public class Listaktuator extends AppCompatActivity implements ListaktuatorView,
     public void tampilkanHasil(ArrayList<Unit> hasil) {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         rvDaftarAktuator.setLayoutManager(manager);
-        rvDaftarAktuator.setAdapter(new DaftarSensorAdapter(this, hasil));
+        rvDaftarAktuator.setAdapter(new DaftarAktuatorAdapter(this, hasil));
     }
 
     @Override
